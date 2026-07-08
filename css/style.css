@@ -409,3 +409,42 @@ nav li{
 }
 
 }
+/* ---------- Profile ---------- */
+
+.profile{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:60px;
+    flex-wrap:wrap;
+}
+
+.profile-img img{
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+
+.profile-info{
+    max-width:600px;
+}
+
+.profile-info h1{
+    color:#1d3557;
+    margin-bottom:20px;
+}
+
+.profile-info table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.profile-info td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.profile-info td:first-child{
+    width:180px;
+}
