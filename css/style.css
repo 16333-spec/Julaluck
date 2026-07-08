@@ -544,3 +544,47 @@ nav li{
 .card p{
     color:#555;
 }
+/* ---------- Contact ---------- */
+
+.contact{
+    padding:60px;
+    text-align:center;
+}
+
+.contact h1{
+    color:#1d3557;
+    margin-bottom:40px;
+}
+
+.contact-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.contact-item{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateY(-8px);
+}
+
+.contact-item i{
+    font-size:45px;
+    color:#457b9d;
+    margin-bottom:20px;
+}
+
+.contact-item h3{
+    margin-bottom:10px;
+    color:#1d3557;
+}
+
+.contact-item p{
+    color:#555;
+}
