@@ -79,6 +79,50 @@
         </p>
 
     </footer>
+<!-- เริ่มโค้ดเอฟเฟกต์โปรยปราย -->
+<style>
+  .falling-item {
+    position: fixed;
+    top: -20px;
+    pointer-events: none; /* ทำให้กดทะลุได้ ไม่บังปุ่มในเว็บ */
+    z-index: 9999;
+    animation: fall linear forwards;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(105vh) rotate(360deg); /* หมุนและร่วงลงจนสุดหน้าจอ */
+    }
+  }
+</style>
 
+<script>
+  function createFallingItem() {
+    const item = document.createElement('div');
+    item.className = 'falling-item';
+    
+    // 🌸 สามารถเปลี่ยนเป็นอีโมจิอื่นที่ชอบได้ตรงนี้ เช่น 💕, ✨, 🧸
+    item.innerText = '🌸'; 
+    
+    // สุ่มตำแหน่ง ความเร็ว และขนาด ให้ดูเป็นธรรมชาติ
+    item.style.left = Math.random() * 100 + 'vw';
+    item.style.fontSize = Math.random() * 12 + 12 + 'px'; // ขนาด 12px - 24px
+    
+    const duration = Math.random() * 3 + 4; // ความเร็วในการร่วง (4-7 วินาที)
+    item.style.animationDuration = duration + 's';
+    item.style.opacity = Math.random() * 0.6 + 0.4; // สุ่มความเข้ม/จาง
+    
+    document.body.appendChild(item);
+    
+    // ลบอิลิเมนต์ทิ้งเมื่อร่วงสุดหน้าจอ เพื่อไม่ให้เครื่องหน่วง
+    setTimeout(() => {
+      item.remove();
+    }, duration * 1000);
+  }
+  
+  // ปรับความถี่ในการปล่อยชิ้นส่วน (หน่วยเป็นมิลลิวินาที เช่น 400 = ปล่อยทุก 0.4 วินาที)
+  setInterval(createFallingItem, 400);
+</script>
+<!-- จบโค้ดเอฟเฟกต์โปรยปราย -->
+    
 </body>
 </html>
